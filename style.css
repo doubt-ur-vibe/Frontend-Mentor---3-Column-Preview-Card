@@ -1,0 +1,129 @@
+:root {
+  /* PRIMARY */
+  --primary-orange: rgb(227, 136, 38);
+  --primary-cyan: rgb(0, 105, 112);
+  --primary-dark-cyan: rgb(0, 66, 65);
+  /* NEUTRAL */
+  --neutral-transparent-white: rgba(255, 255, 255, 0.75);
+  --neutral-light-grey: rgb(242, 242, 242);
+}  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--neutral-light-grey);
+  font-size: 1.5rem;
+  font-family: "lexend-deca", sans-serif;
+  color: var(--neutral-transparent-white);
+  line-height: 1.6;
+}
+
+.section-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.preview-card {
+  display: flex;
+  list-style: none;
+  width: 88%;
+  max-width: 90rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.car-type {
+  padding: 5.2rem;
+}
+
+.car-type-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 36rem;
+}
+
+.card-sedan {
+  background: var(--primary-orange);
+}
+
+.card-suv {
+  background: var(--primary-cyan);
+}
+
+.card-luxury {
+  background: var(--primary-dark-cyan);
+}
+
+.icon {
+  width: 6.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.car-type-header {
+  font-family: "big shoulders display";
+  font-size: 3.6rem;
+  color: var(--neutral-light-grey);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.car-type-description {
+  color: var(--neutral-transparent-white);
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 1.5rem 3rem;
+  font-weight: 600;
+  margin-top: auto;
+  cursor: pointer;
+
+  transition: all 300ms;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #fff;
+  box-shadow:inset 0 0 0 2px #fff;
+}
+
+.btn--sedan {
+  color: var(--primary-orange);
+}
+
+.btn--suv {
+  color: var(--primary-cyan);
+}
+
+.btn--luxury {
+  color: var(--primary-dark-cyan);
+}
+
+@media (max-width: 55em) {
+  .preview-card {
+    flex-direction: column;
+    min-width: 31rem;
+  }
+
+  .car-type-content {
+    max-height: 32rem;
+  }
+
+  .section-preview {
+    margin: 9.6rem 0;
+  }
+}
+
+
